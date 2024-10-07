@@ -1,0 +1,75 @@
+#include<iostream>;
+
+using namespace std;
+
+struct housetype
+{
+	string style;
+	int numofBedrrom;
+	int numofBathroom;
+	int numofcars;
+	int yearbuilt;
+	int squarefootage;
+	double price;
+	double tax;
+};
+
+void compareh(int, int);
+
+
+
+int main() {
+	
+	int mybed;
+	int yourbed;
+	housetype myHouse;
+	housetype yourHouse;
+	housetype lastHouse;
+
+	myHouse.style = "ranch";
+	myHouse.numofBedrrom = 1;
+	myHouse.numofBathroom = 1;
+	myHouse.numofcars = 1;
+	myHouse.yearbuilt = 1998; 
+
+	yourHouse.style = "condo";
+	yourHouse.numofBedrrom = 2;
+	yourHouse.numofBathroom = 1;
+	yourHouse.numofcars = 0;
+	yourHouse.yearbuilt = 1970;
+	
+	lastHouse = myHouse;
+
+	mybed = myHouse.numofBedrrom;
+	yourbed = yourHouse.numofBedrrom;
+
+
+	cout << "My house " << endl;
+	cout << myHouse.style << endl << myHouse.numofBedrrom << endl << myHouse.numofBathroom << endl << myHouse.numofcars << endl << myHouse.yearbuilt << endl;
+
+	cout << "Your House" << endl;
+	cout << yourHouse.style << endl << yourHouse.numofBedrrom << endl << yourHouse.numofBathroom << endl << yourHouse.numofcars << endl << yourHouse.yearbuilt << endl;
+
+	cout << "Last House" << endl;
+	cout << lastHouse.style << endl << lastHouse.numofBedrrom << endl << lastHouse.numofBathroom << endl << lastHouse.numofcars << endl << lastHouse.yearbuilt << endl;
+
+	compareh(mybed, yourbed);
+
+	return 0;
+}
+
+void compareh(int mybed,int yourbed)
+
+{
+	bool comparison;
+	if (mybed == yourbed)
+	{
+		comparison = true;
+		cout << comparison << endl;
+	}
+	else {
+		comparison = false;
+		cout << comparison << endl;
+	}
+}
+
